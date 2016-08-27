@@ -1,0 +1,40 @@
+{
+  "name": "@carnesen/bitcoin-cli",
+  "description": "A command-line utility for the Bitcoin Core software",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "bin": {
+    "bitcoin": "./src/cli.js",
+    "btc": "./src/cli.js"
+  },
+  "author": {
+    "name": "Chris Arnesen",
+    "email": "chris.arnesen@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carnesen/bitcoin-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/carnesen/bitcoin-constants/issues"
+  },
+  "homepage": "https://github.com/carnesen/bitcoin-constants",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint src --config carnesen",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "npm run lint && npm run test:unit",
+    "test:unit": "cross-env NODE_ENV=test mocha src/**/__tests__/**/*.test.js"
+  },
+  "dependencies": {
+    "@carnesen/bitcoin-conf": "0.0.1",
+    "@carnesen/cli": "0.0.1"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "cross-env": "2.0.0",
+    "eslint": "3.4.0",
+    "eslint-config-carnesen": "1.0.2",
+    "mocha": "3.0.2"
+  }
+}

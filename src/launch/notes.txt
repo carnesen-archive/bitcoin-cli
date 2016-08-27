@@ -1,0 +1,7 @@
+spawn --datadir foo --conf foo.conf getInfo
+- read cli args
+- read ~/.bitcoin.conf
+- merge ^ and ^^ with ^^ taking precedence
+- read ^.datadir/^.conf where ^ is value found in above or the default
+- reconcile ^ and ^^
+- spawn
