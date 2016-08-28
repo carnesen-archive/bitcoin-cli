@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@carnesen/bitcoin-conf": "0.0.1",
+    "@carnesen/bitcoin-launch": "0.0.1",
     "@carnesen/cli": "0.0.1"
   },
   "devDependencies": {

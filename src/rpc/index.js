@@ -2,6 +2,6 @@
 
 module.exports = {
   name: 'rpc',
-  description: `Bitcoin Core remote procedure calls`,
+  description: 'Bitcoin Core remote procedure calls',
   commands: [ ]
 };
