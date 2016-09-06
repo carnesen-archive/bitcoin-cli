@@ -1,13 +1,13 @@
 'use strict';
 
-const { readConfFile } = require('@carnesen/bitcoin-conf');
+const { readFile } = require('@carnesen/bitcoin-conf');
 
-const { conf } = require('../constants');
+const { confFilePath } = require('../constants');
 
 module.exports = {
 
   name: 'show',
-  description: `Display the contents of ${ conf }`,
+  description: `Display the contents of ${ confFilePath }`,
   parameters: [],
 
   execute: function* () {
@@ -15,9 +15,9 @@ module.exports = {
     let options = {};
 
     try {
-      options = yield readConfFile({ conf });
+      options = yield readFile(confFilePath);
     } catch (ex) {
-      // If they've never called "set", the file doesn't exist
+      // The file might not exist
       if (ex.code !== 'ENOENT') {
         throw ex;
       }

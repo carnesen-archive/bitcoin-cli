@@ -1,14 +1,14 @@
 'use strict';
 
-const { readConfFile, writeConfFile } = require('@carnesen/bitcoin-conf');
+const { readFile, writeFile } = require('@carnesen/bitcoin-conf');
 
-const { conf } = require('../constants');
+const { confFilePath } = require('../constants');
 
 module.exports = {
 
   name: 'set',
 
-  description: `Sets a value in ${ conf }`,
+  description: `Sets a value in ${ confFilePath }`,
 
   parameters: [
     {
@@ -28,14 +28,14 @@ module.exports = {
   execute: function*({ key, value }) {
     let options = {};
     try {
-      options = yield readConfFile({ conf });
+      options = yield readFile(confFilePath);
     } catch (ex) {
       if (ex.code !== 'ENOENT') {
         throw ex;
       }
     }
     options[key] = value;
-    yield writeConfFile({ conf, options });
+    return yield writeFile(confFilePath, options);
   }
 
 };
