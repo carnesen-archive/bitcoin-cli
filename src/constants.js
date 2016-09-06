@@ -1,5 +1,7 @@
 'use strict';
 
+const { defaultConfFilePath } = require('@carnesen/bitcoin-conf').constants;
+
 module.exports = {
-  conf: '~/.bitcoin.conf'
+  confFilePath: defaultConfFilePath
 };
