@@ -29,7 +29,8 @@
   "dependencies": {
     "@carnesen/bitcoin-conf": "0.0.1",
     "@carnesen/bitcoin-launch": "0.0.1",
-    "@carnesen/cli": "0.0.1"
+    "@carnesen/cli": "0.0.1",
+    "@carnesen/util": "0.0.1"
   },
   "devDependencies": {
     "chai": "3.5.0",
