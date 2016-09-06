@@ -3,6 +3,7 @@
 
 const cli = require('@carnesen/cli');
 
+const log = require('./log');
 const conf = require('./conf');
 const launch = require('./launch');
 const rpc = require('./rpc');
