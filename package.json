@@ -27,15 +27,16 @@
     "test:unit": "cross-env NODE_ENV=test mocha src/**/__tests__/**/*.test.js"
   },
   "dependencies": {
+    "bitcoin-rpc": "0.3.0",
     "@carnesen/bitcoin-conf": "0.0.1",
-    "@carnesen/bitcoin-launch": "0.0.1",
+    "@carnesen/bitcoin-manager": "0.0.1",
     "@carnesen/cli": "0.0.1",
-    "@carnesen/util": "0.0.1"
+    "@carnesen/util": "0.0.3"
   },
   "devDependencies": {
     "chai": "3.5.0",
     "cross-env": "2.0.1",
-    "eslint": "3.4.0",
+    "eslint": "3.5.0",
     "eslint-config-carnesen": "1.0.3",
     "mocha": "3.0.2"
   }

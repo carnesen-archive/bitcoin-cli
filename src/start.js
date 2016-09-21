@@ -1,17 +1,17 @@
 'use strict';
 
-const launch = require('@carnesen/bitcoin-launch');
+const manager = require('@carnesen/bitcoin-manager');
 
 module.exports = {
-  name: 'launch',
+  name: 'start',
   description: 'launches the Bitcoin Core daemon (bitcoind)',
   parameters: [
     {
       name: 'version',
       type: 'string',
       description: 'Version of Bitcoin Core to launch',
-      defaultValue: launch.constants.defaultVersion
+      defaultValue: manager.constants.defaultVersion
     }
   ],
-  execute: launch
+  execute: manager.start
 };

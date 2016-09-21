@@ -3,14 +3,16 @@
 
 const cli = require('@carnesen/cli');
 
+const { description } = require('../package.json');
 require('./log');
 const conf = require('./conf');
-const launch = require('./launch');
+const start = require('./start');
+const stop = require('./stop');
 const rpc = require('./rpc');
-const { description } = require('../package.json');
+const version = require('./version');
 
 cli({
   name: 'bitcoin',
   description,
-  commands: [ conf, launch, rpc ]
+  commands: [ conf, start, stop, version, rpc ]
 });
